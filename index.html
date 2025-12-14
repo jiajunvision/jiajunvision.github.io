@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>jiajun Liang | 梁嘉骏 | Academic Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+		.link-green {
+			color: #B6F36B;
+			font-weight: 600;
+		}
+    /* =============================
+       Local Chinese Font
+    ============================= */
+    @font-face {
+      font-family: "Noto Serif SC Local";
+      src: url("fonts/SentyWEN2017.ttf") format("opentype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* =============================
+       Global Style (Compact)
+    ============================= */
+    html, body {
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      color: #111;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Reduce Bootstrap padding */
+    .container {
+      max-width: 900px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    /* =============================
+       Header
+    ============================= */
+    .cn-name {
+      font-family: "Noto Serif SC Local", "Songti SC", "STSong", "SimSun", serif;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 12px 0 6px;
+  text-transform: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+    }
+
+    .en-name {
+  font-family: "Times New Roman", Times, serif;
+      font-size: 40px;
+      font-weight: 100;
+      margin: 12px 0 6px;
+  text-transform: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+    }
+
+
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .keywords {
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* =============================
+       Avatar + Contact
+    ============================= */
+    .avatar {
+      width: 150px;
+      height: 190px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      background: #eee;
+    }
+
+    .contact {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .contact div {
+      margin-bottom: 4px;
+    }
+
+    .bi {
+      margin-right: 6px;
+    }
+
+    /* =============================
+       Sections
+    ============================= */
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 22px 0 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #d7d7d7;
+    }
+
+    ul {
+      margin: 4px 0 0 18px;
+      padding: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    .highlight {
+      color: #c00;
+    }
+
+    /* =============================
+       Publications
+    ============================= */
+    .pub-note {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .pub-cat {
+      background: #efefef;
+      border: 1px solid #d7d7d7;
+      padding: 6px 8px;
+      font-weight: 700;
+      margin-top: 14px;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .authors {
+      font-style: italic;
+    }
+
+
+.footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85em;
+  color: #888;
+}
+	.contact a {
+		color: inherit;
+	}
+
+	.contact a:hover {
+		text-decoration: underline;
+	}
+
+.en-inline{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #555;
+  margin-left: 6px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header -->
+<div class="cn-name">
+  梁嘉骏 <span class="en-inline">Jiajun Liang</span>
+</div>
+
+    <div class="row align-items-start">
+      <div class="col-md-3">
+        <img src="me.png" class="avatar" alt="photo" onerror="this.style.display='none'">
+
+				<div class="contact d-flex align-items-center gap-3">
+					<a href="mailto:tracyliang18@gmail.com" aria-label="Email">
+						<i class="bi bi-envelope"></i>
+					</a>
+
+					<a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+						<i class="bi bi-mortarboard"></i>
+					</a>
+
+					<a href="https://github.com/jiajunvision" target="_blank" rel="noreferrer" aria-label="GitHub">
+						<i class="bi bi-github"></i>
+					</a>
+
+					<!--
+					<a href="cv.pdf" aria-label="CV">
+						<i class="bi bi-file-earmark-text"></i>
+					</a> 
+					-->
+				</div>
+    </div>
+      <div class="col-md-9" >
+				<div class="col-md-12" >
+					Currently I build and deploy <b>RLHF systems for video generation</b> at <a href="https://app.klingai.com/cn/" target="_blank" rel="noreferrer" ><b>Kling</b></a>,
+					covering preference data pipelines, reward modeling, and scalable and stable reinforcement learning.
+					<br><br>
+					<b>AI 1.0 (Perception & Recognition)</b>:
+					Previously, I led an algorithm team at <a href="https://www.megvii.com/" target="_blank" rel="noreferrer"><b>Megvii</b></a> and <a href="https://www.jiiov.com" target="_blank" rel="noreferrer"><b>Jiiov</b></a>, focusing on
+					visual perception systems, including face, hand, finger, and
+					human-centric <b>2D & 3D understanding and recognition</b>,
+					deployed over <b>100 million mobile devices</b> for
+					everyday real-world usage. In parallel, I have extensive research experience with publications at top-tier AI and vision conferences; see my <a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ" target="_blank">Google Scholar</a>.
+					<br><br>
+				<div style="color: #d62728; font-size: 0.9em;">
+				I am looking for self-motivated interns for mulimodal understanding and generation research! Drop me an email if you are interested.
+				</div>
+				</div>
+
+      </div>
+
+    <!-- News -->
+
+    <h2>News</h2>
+    <ul>
+      <li>[2025.12] Kling Launch Week has come! Including Omni, Sound, Avatar and more! [<a href="https://www.youtube.com/watch?v=bDp-eRMLj3c" target="_blank" rel="noreferrer">Youtube</a>] </li>
+      <li>[2025.10] GRPO-Guard for tackling over-optimization in flow matching is released. [<a href="https://jingw193.github.io/GRPO-Guard/">Project</a>][<a href="https://arxiv.org/abs/2510.22319">Paper</a>] </li>
+      <li>[2025.09] Three papers ha been accepted By NeurIPS 2025! </li>
+      <li>[2025.09] VR-Thinker reward for video generation is released.[<a href='https://github.com/qunzhongwang/vr-thinker'>Project</a>] [<a href='https://arxiv.org/pdf/2510.10518?'>Paper</a>] </li>
+      <li>[2025.06] EvoSearch for video test-time scaling is released. [<a href='https://tinnerhrhe.github.io/evosearch/'>Project</a>][<a href='https://arxiv.org/abs/2505.17618'>Paper</a>]</li>
+      <li>[2025.05] We release Flow-GRPO, the first method to integrate online policy gradient reinforcement learning (RL) into flow matching models[<a href='https://github.com/yifan123/flow_grpo'>Project</a>][<a href='https://arxiv.org/abs/2505.05470'>Paper</a>]</li>
+      <li>[2025.05] One paper has been accepted by ICML 2025! </li>
+      <li>[2025.04] Kling 2.0 is released! [<a href='https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-advances-20-era-empowering-everyone-tell-great-stories/'>Link</a>]  </li>
+      <li>[2025.01] Video-Align is released. we develop a systematic pipeline that leverage human feedback to improve video generation. [<a href='https://gongyeliu.github.io/videoalign/'>Project</a>][<a href='https://arxiv.org/abs/2501.13918'>Paper</a>]</li>
+			
+    </ul>
+
+    <!-- About -->
+    <h2>About me</h2>
+			<p>
+I received my M.S. degree from Tsinghua University in 2017 and my B.S. degree from Huazhong University of Science and Technology in 2014.
+My research interests lie in multimodal understanding and generation,
+with a particular focus on data pipelines and reinforcement-learning based post-training.
+			</p>
+
+    <!-- Experience -->
+    <h2>Working Experience</h2>
+    <ul>
+      <li><b>Kuaishou Kling</b>, Multimodal Video Generation (2024 – Present)</li>
+      <li><b>Megvii</b>, Algorithm Director (2016 – 2024)</li>
+    </ul>
+
+    <!-- Publications -->
+    <h2>Selected Publications</h2>
+    <div class="pub-note">
+      See full list at <a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a><br>
+    </div>
+<!-- ================= Video Generation / RLHF ================= -->
+<div class="pub-cat">▲ Video Generation / RLHF</div>
+<div class="pub-title">Flow-GRPO: Training Flow Matching Models via Online RL</div>
+<div class="authors">J. Liu, G. Liu, <b>Jiajun Liang</b>, Y. Li, J. Liu, X. Wang, P. Wan, D. Zhang, W. Ouyang</div>
+<div>NeurIPS, 2025 </div>
+
+<div class="pub-title">GRPO-Guard: Mitigating Implicit Over-Optimization in Flow Matching via Regulated Clipping</div>
+<div class="authors">J. Wang, <b>Jiajun Liang</b>, J. Liu, H. Liu, G. Liu, J. Zheng, W. Pang, A. Ma, Z. Xie, X. Wang</div>
+<div>Preprint, 2025</div>
+
+<div class="pub-title">Improving Video Generation with Human Feedback</div>
+<div class="authors">J. Liu, G. Liu, <b>Jiajun Liang</b>, Z. Yuan, X. Liu, M. Zheng, X. Wu, Q. Wang, M. Xia, X. Wang</div>
+<div>NeurIPS, 2025</div>
+
+<div class="pub-title">Scaling Image and Video Generation via Test-Time Evolutionary Search</div>
+<div class="authors">H. He, <b>Jiajun Liang</b>, X. Wang, P. Wan, D. Zhang, K. Gai, L. Pan</div>
+<div>NeurIPS Workshop, 2025</div>
+
+<div class="pub-title">VR-Thinker: Boosting Video Reward Models through Thinking-with-Image Reasoning</div>
+<div class="authors">Q. Wang, J. Liu, <b>Jiajun Liang</b>, Y. Jiang, Y. Zhang, J. Chen, Y. Zheng, X. Wang, P. Wan, X. Yue</div>
+<div>Preprint, 2025</div>
+
+
+<!-- ================= Diffusion Models ================= -->
+<div class="pub-cat">▲ Diffusion Models</div>
+
+<div class="pub-title">HiDiffusion: Unlocking High-Resolution Creativity and Efficiency in Low-Resolution Trained Diffusion Models</div>
+<div class="authors">S. Zhang, Z. Chen, Z. Zhao, Z. Chen, Y. Tang, Y. Chen, W. Cao, <b>Jiajun Liang</b></div>
+<div>ECCV, 2023 </div>
+
+<div class="pub-title">MegActor: Harnessing Diffusion Models for High-Fidelity Human Animation</div>
+<div class="authors">Z. Zhou, Z. Lv, S. Zhou, M. Zou, T. Wu, M. Yu, Y. Tang, <b>Jiajun Liang</b></div>
+<div>AAAI, 2024 </div>
+
+<div class="pub-title">MegActor-Sigma: Scalable Human Video Generation with Diffusion Models</div>
+<div class="authors">Z. Zhou, Z. Lv, S. Zhou, M. Zou, T. Wu, M. Yu, Y. Tang, <b>Jiajun Liang</b></div>
+<div>AAAI, 2025 </div>
+
+<div class="pub-title">LEDiT: Your Length-Extrapolatable Diffusion Transformer without Positional Encoding</div>
+<div class="authors">S. Zhang, S. Liang, Y. Tan, Z. Chen, L. Li, G. Wu, Y. Chen, S. Li, Z. Zhao, C. Chen, <b>Jiajun Liang</b>, Y. Tang</div>
+<div>NeurIPS, 2025</div>
+
+
+<!-- ================= Knowledge Distillation ================= -->
+<div class="pub-cat">▲ Knowledge Distillation/Efficient AI</div>
+
+<div class="pub-title">Efficient One-Pass Self-Distillation with Zipf’s Label Smoothing</div>
+<div class="authors"><b>Jiajun Liang</b>, L. Li, Z. Bing, B. Zhao, Y. Tang, B. Lin, H. Fan</div>
+<div>ECCV, 2022</div>
+
+<div class="pub-title">Decoupled Knowledge Distillation</div>
+<div class="authors">B. Zhao, Q. Cui, R. Song, Y. Qiu, <b>Jiajun Liang</b></div>
+<div>CVPR, 2022</div>
+
+<div class="pub-title">Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers</div>
+<div class="authors">S. Wei, T. Ye, S. Zhang, Y. Tang, <b>Jiajun Liang</b></div>
+<div>CVPR, 2023</div>
+
+<div class="pub-title">Asymmetric Decision-Making in Online Knowledge Distillation</div>
+<div class="authors">Z. Chen, B. Zhao, Y. Ge, Y. Chen, R. Song, <b>Jiajun Liang</b></div>
+<div>ICML, 2025</div>
+
+
+<div class="pub-title">Cumulative Spatial Knowledge Distillation for Vision Transformers</div>
+<div class="authors">B. Zhao, R. Song, <b>Jiajun Liang</b></div>
+<div>ICCV, 2023</div>
+
+<div class="pub-title">DOT: A Distillation-Oriented Trainer</div>
+<div class="authors">B. Zhao, Q. Cui, R. Song, <b>Jiajun Liang</b></div>
+<div>ICCV, 2023</div>
+
+<!-- ================= Vision / Recognition ================= -->
+<div class="pub-cat">▲ Vision / Recognition</div>
+
+<div class="pub-title">EAST: An Efficient and Accurate Scene Text Detector</div>
+<div class="authors">X. Zhou, C. Yao, H. Wen, Y. Wang, S. Zhou, W. He, <b>Jiajun Liang</b></div>
+<div>CVPR, 2017</div>
+
+<div class="pub-title">A Simple Baseline for Efficient Hand Mesh Reconstruction</div>
+<div class="authors">Z. Zhishan, Z. Shihao, L. Zhi, Z. Minqiang, T. Yao, <b>Jiajun Liang</b></div>
+<div>CVPR, 2024</div>
+
+<div class="pub-title">Implicit Identity Leakage: The Stumbling Block to Improving Deepfake Detection Generalization</div>
+<div class="authors">S. Dong, J. Wang, R. Ji, <b>Jiajun Liang</b>, H. Fan, Z. Ge</div>
+<div>CVPR, 2023</div>
+
+  </div>
+    <div class='footer'>
+      © <span id="year"></span> Jiajun Liang
+    </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
