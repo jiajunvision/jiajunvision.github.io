@@ -224,6 +224,61 @@
 .name-header h1{
   margin: 0;
 }
+
+    /* =============================
+       Poster Thumbnail & Hover
+    ============================= */
+    .poster-container {
+      position: relative;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+    .poster-thumbnail {
+      width: 120px;
+      height: auto;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .poster-thumbnail:hover {
+      transform: scale(1.05);
+    }
+
+    .poster-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .poster-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .poster-overlay.show {
+      display: flex;
+    }
+
+    .poster-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      z-index: 10000;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -301,9 +356,10 @@
 				</div>
     </div>
       <div class="col-md-9" >
-				<div class="col-md-12" >
+				<div class="col-md-12 d-flex align-items-start" >
 
-					<b>AI 2.0 (GenAI)</b>:
+					<div class="flex-grow-1">
+						<b>AI 2.0 (GenAI)</b>:
 					Currently I build and deploy <b>RLHF systems for multimodal video generation</b> at <a href="https://app.klingai.com/cn/" target="_blank" rel="noreferrer" ><b>Kling</b></a>,
 					covering preference data pipelines, reward modeling, and scalable and stable reinforcement learning.
 					<br><br>
@@ -317,6 +373,11 @@
 				<div style="color: #d62728; font-size: 0.9em;">
 				I am looking for self-motivated interns for multimodal understanding and generation research! Drop me an email if you are interested.
 				</div>
+					</div>
+
+					<div class="poster-container">
+						<img src="poster.png" class="poster-thumbnail" alt="TLDR Poster" onclick="showPoster()">
+					</div>
 				</div>
 
       </div>
@@ -530,6 +591,12 @@ My research interests lie in multimodal understanding and generation, with a par
       © <span id="year"></span> Jiajun Liang
     </div>
 
+    <!-- Poster Overlay -->
+    <div id="posterOverlay" class="poster-overlay">
+      <span class="poster-close" onclick="hidePoster()">&times;</span>
+      <img src="poster.png" alt="Full size poster">
+    </div>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -537,6 +604,22 @@ My research interests lie in multimodal understanding and generation, with a par
 
     gtag('config', 'G-BZB4Q8337P');
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Poster functions
+    function showPoster() {
+      document.getElementById('posterOverlay').classList.add('show');
+    }
+
+    function hidePoster() {
+      document.getElementById('posterOverlay').classList.remove('show');
+    }
+
+    // Close overlay when clicking outside image
+    document.getElementById('posterOverlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        hidePoster();
+      }
+    });
   </script>
 </body>
 </html>
