@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Jiajun Liang</title>
@@ -31,253 +31,95 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZB4Q8337P"></script>
 
   <style>
-		.link-green {
-			color: #B6F36B;
-			font-weight: 600;
-		}
-    /* =============================
-       Local Chinese Font
-    ============================= */
-    @font-face {
-      font-family: "Noto Serif SC Local";
-      src: url("fonts/SentyWEN2017.ttf") format("opentype");
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
+    :root {
+      --ink: #242a31;
+      --muted: #586473;
+      --accent: #245fa6;
+      --rule: #e3e6e8;
     }
-
-    /* =============================
-       Global Style (Compact)
-    ============================= */
-    html, body {
-      background: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-
+    html { background: #fff; }
     body {
-      font-family: "Times New Roman", Times, serif;
-      color: #111;
-      line-height: 1.5;
-    }
-
-    a {
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Reduce Bootstrap padding */
-    .container {
-      max-width: 900px;
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    /* =============================
-       Header
-    ============================= */
-    .cn-name {
-      font-family: "Noto Serif SC Local", "Songti SC", "STSong", "SimSun", serif;
-      font-size: 40px;
-      font-weight: 700;
-      margin: 12px 0 6px;
-  text-transform: none;
-  letter-spacing: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-    }
-
-    .en-name {
-  font-family: "Times New Roman", Times, serif;
-      font-size: 40px;
-      font-weight: 100;
-      margin: 12px 0 6px;
-  text-transform: none;
-  letter-spacing: normal;
-  word-spacing: normal;
-  white-space: nowrap;
-    }
-
-
-    .subtitle {
-      font-size: 16px;
-      margin-bottom: 6px;
-      text-align: center;
-    }
-
-    .keywords {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       font-size: 15px;
-      text-align: center;
-      margin-bottom: 10px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
-
-    /* =============================
-       Avatar + Contact
-    ============================= */
-    .avatar {
-      width: 150px;
-      height: 190px;
-      object-fit: cover;
-      border: 1px solid #ccc;
-      background: #eee;
-    }
-
-    .contact {
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    .contact div {
-      margin-bottom: 4px;
-    }
-
-    .bi {
-      margin-right: 6px;
-    }
-
-    /* =============================
-       Sections
-    ============================= */
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 22px 0 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #d7d7d7;
-    }
-
-    ul {
-      margin: 4px 0 0 18px;
-      padding: 0;
-    }
-
-    li {
-      margin: 4px 0;
-    }
-
-    .highlight {
-      color: #c00;
-    }
-
-    /* =============================
-       Publications
-    ============================= */
-    .pub-note {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 6px;
-    }
-
-    .pub-cat {
-      background: #efefef;
-      border: 1px solid #d7d7d7;
-      padding: 6px 8px;
-      font-weight: 700;
-      margin-top: 14px;
-    }
-
-    .pub-title {
-      font-weight: 700;
-      margin-top: 6px;
-    }
-
-    .authors {
-      font-style: italic;
-    }
-
-
-.footer {
-  margin-top: 32px;
-  padding-top: 12px;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85em;
-  color: #888;
-}
-	.contact a {
-		color: inherit;
-	}
-
-	.contact a:hover {
-		text-decoration: underline;
-	}
-
-.en-inline{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 33px;
-  font-weight: 400;
-  color: #555;
-  margin-left: 6px;
-}
-
-  .name-header{
-  display: flex;
-  align-items: center;   /* vertical alignment */
-  gap: 12px;             /* spacing between image & text */
-}
-
-.name-header img{
-  display: block;
-}
-
-.name-header h1{
-  margin: 0;
-}
-
-    /* =============================
-       Poster Thumbnail & Hover
-    ============================= */
-    .poster-container {
-      position: relative;
-      display: inline-block;
-      margin-left: 12px;
-    }
-
-    .poster-thumbnail {
-      width: 120px;
-      height: auto;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .poster-thumbnail:hover {
-      transform: scale(1.05);
-    }
-
-    .poster-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .poster-overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
-    }
-
-    .poster-overlay.show {
-      display: flex;
-    }
-
-    .poster-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
+    .container { max-width: 960px; padding: 64px 32px 28px; }
+    a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
+    a:hover { color: #174477; text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    b, strong { font-weight: 600; }
+    .name-header { display: flex; align-items: center; gap: 24px; margin-bottom: 32px; }
+    .name-header img { display: block; width: 142px; height: auto; }
+    .name-header h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 40px;
-      cursor: pointer;
-      z-index: 10000;
+      font-weight: 400;
+      letter-spacing: -1.2px;
+      line-height: 1.2;
+    }
+    .research-direction { margin: -12px 0 32px; }
+    .research-direction .verbs { margin: 0; color: var(--accent); font-size: 14px; font-weight: 600; letter-spacing: .3px; }
+    .research-direction .arrow { margin: 0 10px; color: #8da3bc; font-weight: 400; }
+    .research-direction .caption { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+    .ai-stage .stage-action { color: var(--accent); font-weight: 600; }
+    .ai-stage .stage-divider { color: #9bafc5; font-weight: 400; }
+    .ai-stage .stage-name { font-weight: 500; }
+    .profile { --bs-gutter-x: 40px; }
+    .avatar { width: 150px; height: 190px; object-fit: cover; background: #f4f5f6; }
+    .contact { margin-top: 16px; gap: 18px !important; }
+    .contact a { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; min-height: 32px; color: var(--accent); font-size: 18px; }
+    .contact a:hover { color: var(--accent); }
+    .ai-journey { max-width: 760px; margin: 2px 0 20px 4px; color: #374151; font-size: 15px; line-height: 1.75; }
+    .ai-stage { position: relative; padding: 0 0 24px 24px; border-left: 1px solid var(--rule); }
+    .ai-stage:last-of-type { padding-bottom: 4px; }
+    .ai-stage::before { content: ""; position: absolute; left: -4px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: #9bafc5; }
+    .ai-stage.current::before { background: var(--accent); box-shadow: 0 0 0 4px #edf3f7; }
+    .ai-stage h3 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin: 0 0 7px; color: var(--ink); font-size: 17px; line-height: 1.5; font-weight: 600; }
+    .ai-stage p { margin: 0; }
+    .ai-journey strong { color: var(--ink); font-weight: 600; }
+    .ai-journey a { color: var(--accent); text-decoration: underline; text-decoration-color: #a9c2df; text-underline-offset: 3px; }
+    .ai-journey a:hover { color: #174477; text-decoration-color: #174477; }
+    .ai-research { margin: 20px 0 0 24px; color: var(--muted); font-size: 13px; }
+    .intro .opportunity { margin: 0 0 0 28px; }
+    .opportunity { border-left: 2px solid #7298c4; padding-left: 14px; color: #365b83; font-size: 13px; }
+    h2 { margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); font-size: 19px; line-height: 1.4; font-weight: 600; letter-spacing: -.3px; }
+    ul { margin: 0; padding-left: 19px; }
+    li { margin: 7px 0; padding-left: 3px; }
+    li::marker { color: #9ba6af; }
+    .news { list-style: none; padding: 0; font-size: 14px; }
+    .news li { position: relative; padding-left: 86px; margin: 9px 0; }
+    .news time { position: absolute; left: 0; color: var(--muted); font-size: 12px; line-height: 24.5px; font-variant-numeric: tabular-nums; }
+    .pub-note { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+    .pub-cat { margin: 32px 0 18px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); color: var(--accent); font-size: 16px; font-weight: 600; line-height: 1.5; }
+    .pub-title { margin-top: 22px; font-size: 15px; font-weight: 600; line-height: 1.55; }
+    .pub-cat + .pub-title { margin-top: 0; }
+    .authors { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+    .authors b { color: #414a54; }
+    .authors + div { margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 12px; }
+    .poster-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.9); z-index: 9999; justify-content: center; align-items: center; padding: 20px; }
+    .poster-overlay.show { display: flex; }
+    .poster-overlay img { max-width: 90%; max-height: 90%; }
+    .poster-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+    @media (max-width: 767px) {
+      .container { padding: 36px 24px 24px; }
+      .name-header { gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
+      .name-header img { width: 118px; }
+      .name-header h1 { font-size: 32px; }
+      .profile > .col-md-3 { display: flex; align-items: flex-end; gap: 24px; margin-bottom: 26px; }
+      .avatar { width: 108px; height: 137px; }
+      .contact { margin: 0 0 2px; }
+      h2 { margin-top: 32px; }
+      .news li { padding-left: 74px; }
+    }
+    @media print {
+      .container { max-width: none; padding: 0; }
+      .poster-overlay { display: none !important; }
+      .pub-title { break-after: avoid; }
     }
   </style>
 
@@ -307,7 +149,6 @@
       "https://github.com/jiajunvision",
       "https://www.linkedin.com/in/liangjiajun/",
       "https://openreview.net/profile?id=%7EJiajun_Liang1"
-      // add LinkedIn or other official profiles if you have them
     ],
     "knowsAbout": [
       "video generation",
@@ -331,7 +172,12 @@
       <h1>Jiajun Liang</h1>
     </div>
 
-    <div class="row align-items-start">
+    <div class="research-direction" aria-label="Research direction: Perceive, Generate, Act">
+      <p class="verbs">Perceive <span class="arrow" aria-hidden="true">→</span> Generate <span class="arrow" aria-hidden="true">→</span> Act</p>
+      <p class="caption">From visual perception to embodied intelligence.</p>
+    </div>
+
+    <div class="row align-items-start profile">
       <div class="col-md-3">
         <img src="jiajun_liang.png" class="avatar" alt="Photo of Jiajun Liang (梁嘉骏)" onerror="this.style.display='none'">
 
@@ -351,72 +197,74 @@
 					<!--
 					<a href="cv.pdf" aria-label="CV">
 						<i class="bi bi-file-earmark-text"></i>
-					</a> 
+					</a>
 					-->
 				</div>
     </div>
       <div class="col-md-9" >
 				<div class="col-md-12 d-flex align-items-start" >
 
-					<div class="flex-grow-1">
-						<b>AI 2.0 (GenAI)</b>:
-					Currently I build and deploy <b>RLHF systems for multimodal video generation</b> at <a href="https://app.klingai.com/cn/" target="_blank" rel="noreferrer" ><b>Kling</b></a>,
-					covering preference data pipelines, reward modeling, and scalable and stable reinforcement learning.
-					<br><br>
-					<b>AI 1.0 (Perception & Recognition)</b>:
-					Previously, I led an algorithm team at <a href="https://www.megvii.com/" target="_blank" rel="noreferrer"><b>Megvii</b></a> and <a href="https://www.jiiov.com" target="_blank" rel="noreferrer"><b>Jiiov</b></a>, focusing on
-					visual perception systems, including face, hand, finger, and
-					human-centric <b>2D & 3D understanding and recognition</b>,
-					deployed over <b> billion mobile devices</b> for
-					everyday real-world usage. In parallel, I have extensive research experience with publications at top-tier AI and vision conferences; see my <a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ" target="_blank">Google Scholar</a>.
-					<br><br>
-				<div style="color: #d62728; font-size: 0.9em;">
-				I am looking for self-motivated interns for multimodal understanding and generation research! Drop me an email if you are interested.
-				</div>
+					<div class="flex-grow-1 intro">
+<div class="ai-journey">
+  <section class="ai-stage current" aria-labelledby="embodied-stage">
+    <h3 id="embodied-stage"><span class="stage-action">Act</span><span class="stage-divider" aria-hidden="true">·</span><span class="stage-name">Embodied AI</span></h3>
+    <p>Building embodied AI systems powered by frontier models to perceive, reason, and act in the physical world.</p>
+  </section>
+  <section class="ai-stage" aria-labelledby="generative-stage">
+    <h3 id="generative-stage"><span class="stage-action">Generate</span><span class="stage-divider" aria-hidden="true">·</span><span class="stage-name">Generative AI</span></h3>
+    <p>I built and deployed <strong>RLHF systems for multimodal video generation</strong> at leading companies, including <a href="https://app.klingai.com/cn/" target="_blank" rel="noopener noreferrer">Kling</a>, covering preference data pipelines, reward modeling, and scalable, stable reinforcement learning.</p>
+  </section>
+  <section class="ai-stage" aria-labelledby="perception-stage">
+    <h3 id="perception-stage"><span class="stage-action">Perceive</span><span class="stage-divider" aria-hidden="true">·</span><span class="stage-name">Perception &amp; Recognition</span></h3>
+    <p>I led algorithm teams at <a href="https://www.megvii.com/" target="_blank" rel="noopener noreferrer">Megvii</a> and <a href="https://www.jiiov.com/" target="_blank" rel="noopener noreferrer">Jiiov</a>, developing <strong>2D and 3D perception and biometric recognition systems</strong> deployed on over one billion mobile devices.</p>
+  </section>
+  <p class="ai-research">Publications at top-tier AI and computer vision conferences. <a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></p>
+</div>
+<p class="opportunity">
+				I am looking for self-motivated interns for Embodied AI
+</p>
 					</div>
 
-					<div class="poster-container">
-						<img src="poster.png" class="poster-thumbnail" alt="TLDR Poster" onclick="showPoster()">
-						<div style="text-align: center; margin-top: 4px; font-size: 0.85em; color: #666;">TLDR Poster</div>
-					</div>
 				</div>
 
       </div>
 
+    </div><!-- /profile -->
+
     <!-- News -->
 
     <h2>News</h2>
-    <ul>
-      <li>[2026.09] Two papers have been accepted by NeurIPS 2026! </li>
-      <li>[2026.05] Two papers have been accepted by ICML 2026! </li>
-      <li>[2026.04] GRPO-Guard is selected as highlight in CVPR 2026! </li>
-      <li>[2026.02] One paper has been accepted by CVPR 2026! </li>
-      <li>[2026.01] One paper has been accepted by ICLR 2026! </li>
-      <li>[2026.01] We release Gardo, a method for mitigating reward hacking and improving generation diversity. [<a href="https://huggingface.co/papers/2512.24138" target="_blank" rel="noreferrer">Paper</a>][<a href="https://github.com/tinnerhrhe/GARDO">Code</a>]</li> 
-      <li>[2025.12] Kling-Omni Technical Report is released. [<a href="https://arxiv.org/abs/2512.16776" target="_blank" rel="noreferrer">Link</a>] </li>
-      <li>[2025.12] Kling Launch Week has come! Including Omni, Sound, Avatar and more! [<a href="https://www.youtube.com/watch?v=bDp-eRMLj3c" target="_blank" rel="noreferrer">Youtube</a>] </li>
-      <li>[2025.10] GRPO-Guard for tackling over-optimization in flow matching is released. [<a href="https://jingw193.github.io/GRPO-Guard/">Project</a>][<a href="https://arxiv.org/abs/2510.22319">Paper</a>] </li>
-      <li>[2025.09] Three papers have been accepted by NeurIPS 2025! </li>
-      <li>[2025.09] VR-Thinker reward for video generation is released. [<a href='https://github.com/qunzhongwang/vr-thinker'>Project</a>] [<a href='https://arxiv.org/pdf/2510.10518'>Paper</a>] </li>
-      <li>[2025.06] EvoSearch for video test-time scaling is released. [<a href='https://tinnerhrhe.github.io/evosearch/'>Project</a>][<a href='https://arxiv.org/abs/2505.17618'>Paper</a>]</li>
-      <li>[2025.05] We release Flow-GRPO, the first method to integrate online policy gradient reinforcement learning (RL) into flow matching models. [<a href='https://github.com/yifan123/flow_grpo'>Project</a>][<a href='https://arxiv.org/abs/2505.05470'>Paper</a>]</li>
-      <li>[2025.05] One paper has been accepted by ICML 2025! </li>
-      <li>[2025.04] Kling 2.0 is released! [<a href='https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-advances-20-era-empowering-everyone-tell-great-stories/'>Link</a>]  </li>
-      <li>[2025.01] Video-Align is released. we develop a systematic pipeline that leverage human feedback to improve video generation. [<a href='https://gongyeliu.github.io/videoalign/'>Project</a>][<a href='https://arxiv.org/abs/2501.13918'>Paper</a>]</li>
+    <ul class="news">
+      <li><time datetime="2026-09">2026.09</time> Two papers have been accepted by NeurIPS 2026! </li>
+      <li><time datetime="2026-05">2026.05</time> Two papers have been accepted by ICML 2026! </li>
+      <li><time datetime="2026-04">2026.04</time> GRPO-Guard is selected as highlight in CVPR 2026! </li>
+      <li><time datetime="2026-02">2026.02</time> One paper has been accepted by CVPR 2026! </li>
+      <li><time datetime="2026-01">2026.01</time> One paper has been accepted by ICLR 2026! </li>
+      <li><time datetime="2026-01">2026.01</time> We release Gardo, a method for mitigating reward hacking and improving generation diversity. [<a href="https://huggingface.co/papers/2512.24138" target="_blank" rel="noreferrer">Paper</a>][<a href="https://github.com/tinnerhrhe/GARDO">Code</a>]</li>
+      <li><time datetime="2025-12">2025.12</time> Kling-Omni Technical Report is released. [<a href="https://arxiv.org/abs/2512.16776" target="_blank" rel="noreferrer">Link</a>] </li>
+      <li><time datetime="2025-12">2025.12</time> Kling Launch Week has come! Including Omni, Sound, Avatar and more! [<a href="https://www.youtube.com/watch?v=bDp-eRMLj3c" target="_blank" rel="noreferrer">Youtube</a>] </li>
+      <li><time datetime="2025-10">2025.10</time> GRPO-Guard for tackling over-optimization in flow matching is released. [<a href="https://jingw193.github.io/GRPO-Guard/">Project</a>][<a href="https://arxiv.org/abs/2510.22319">Paper</a>] </li>
+      <li><time datetime="2025-09">2025.09</time> Three papers have been accepted by NeurIPS 2025! </li>
+      <li><time datetime="2025-09">2025.09</time> VR-Thinker reward for video generation is released. [<a href='https://github.com/qunzhongwang/vr-thinker'>Project</a>] [<a href='https://arxiv.org/pdf/2510.10518'>Paper</a>] </li>
+      <li><time datetime="2025-06">2025.06</time> EvoSearch for video test-time scaling is released. [<a href='https://tinnerhrhe.github.io/evosearch/'>Project</a>][<a href='https://arxiv.org/abs/2505.17618'>Paper</a>]</li>
+      <li><time datetime="2025-05">2025.05</time> We release Flow-GRPO, the first method to integrate online policy gradient reinforcement learning (RL) into flow matching models. [<a href='https://github.com/yifan123/flow_grpo'>Project</a>][<a href='https://arxiv.org/abs/2505.05470'>Paper</a>]</li>
+      <li><time datetime="2025-05">2025.05</time> One paper has been accepted by ICML 2025! </li>
+      <li><time datetime="2025-04">2025.04</time> Kling 2.0 is released! [<a href='https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-advances-20-era-empowering-everyone-tell-great-stories/'>Link</a>]  </li>
+      <li><time datetime="2025-01">2025.01</time> Video-Align is released. we develop a systematic pipeline that leverage human feedback to improve video generation. [<a href='https://gongyeliu.github.io/videoalign/'>Project</a>][<a href='https://arxiv.org/abs/2501.13918'>Paper</a>]</li>
     </ul>
 
     <!-- About -->
     <h2>About me</h2>
 			<p>
-I am Jiajun Liang, I was born in Zhongshan, Guangdong Province, the hometown of Sun Yat-sen, and I now live in Beijing. <br>
-I received my M.S. degree from Tsinghua University in 2017 and my B.E. degree from Huazhong University of Science and Technology in 2014. <br>
-My research interests lie in multimodal understanding and generation, with a particular focus on data curation pipelines and reinforcement-learning based post-training.
+I am Jiajun Liang, a researcher based in Beijing, originally from Zhongshan, Guangdong. <br>
+I received my Master of Science in Computer Science from Tsinghua University in 2017 and my Bachelor of Engineering in Electrical Engineering from Huazhong University of Science and Technology in 2014. <br>
+My research spans multimodal perception, generation, and embodied intelligence.
 			</p>
 
     <!-- Experience -->
     <h2>Working Experience</h2>
     <ul>
-      <li><b>Kuaishou Kling</b>, Multimodal Video Generation (2024 – Present)</li>
+      <li><b>Kuaishou Kling</b>, Multimodal Video Generation (2024 – 2026)</li>
       <li><b>Megvii</b>, Algorithm Director (2016 – 2024)</li>
     </ul>
 
@@ -426,7 +274,7 @@ My research interests lie in multimodal understanding and generation, with a par
       See full list at <a href="https://scholar.google.com/citations?user=xNxlvjEAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a><br>
     </div>
     <!-- ================= Video Generation / RLHF ================= -->
-<div class="pub-cat">▲ Video Generation / RLHF</div>
+<div class="pub-cat">Video Generation &amp; RLHF</div>
 
 <div class="pub-title">Flow-GRPO: Training Flow Matching Models via Online RL</div>
 <div class="authors">J. Liu, G. Liu, <b>Jiajun Liang</b>, Y. Li, J. Liu, X. Wang, P. Wan, D. Zhang, W. Ouyang</div>
@@ -463,7 +311,7 @@ My research interests lie in multimodal understanding and generation, with a par
 <div class="pub-title">Scaling Image and Video Generation via Test-Time Evolutionary Search</div>
 <div class="authors">H. He, <b>Jiajun Liang</b>, X. Wang, P. Wan, D. Zhang, K. Gai, L. Pan</div>
 <div>
-  NeurIPS Workshop, 2025 
+  NeurIPS Workshop, 2025
   [<a href="https://arxiv.org/abs/2505.17618" target="_blank">Paper</a>]
   [<a href="https://github.com/tinnerhrhe/EvoSearch-codes" target="_blank">Code</a>]
 </div>
@@ -476,8 +324,26 @@ My research interests lie in multimodal understanding and generation, with a par
   [<a href="https://github.com/qunzhongwang/vr-thinker" target="_blank">Code</a>]
 </div>
 
+<div class="pub-title">TempAct: Advancing Temporal Plausibility in Autoregressive Video Generation via Planner-Executor RL</div>
+<div class="authors">J. Wang, X. Zhou, <b>Jiajun Liang</b>, K. Liu, W. Pang, Z. Xie, T. Pang, X. Liang</div>
+<div>
+  Preprint, 2026
+  [<a href="https://arxiv.org/abs/2606.28016" target="_blank" rel="noopener noreferrer">Paper</a>]
+  [<a href="https://github.com/jingw193/TempAct" target="_blank" rel="noopener noreferrer">Code</a>]
+  [<a href="https://jingw193.github.io/TempAct/" target="_blank" rel="noopener noreferrer">Project</a>]
+</div>
+
+<div class="pub-title">Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling</div>
+<div class="authors">Y. Wang, O. Li, Y. Xu, B. Liao, <b>Jiajun Liang</b>, J. Li, M. Wang, X. Wang, P. Wan, K. Liu, X. Wang</div>
+<div>
+  NeurIPS, 2026
+  [<a href="https://arxiv.org/abs/2605.05922" target="_blank" rel="noopener noreferrer">Paper</a>]
+  [<a href="https://github.com/KlingAIResearch/DeScore" target="_blank" rel="noopener noreferrer">Code</a>]
+  [<a href="https://wyuan1001.github.io/DeScore/" target="_blank" rel="noopener noreferrer">Project</a>]
+</div>
+
 <!-- ================= Diffusion Models ================= -->
-<div class="pub-cat">▲ Diffusion Models</div>
+<div class="pub-cat">Diffusion Models</div>
 
 <div class="pub-title">LEDiT: Your Length-Extrapolatable Diffusion Transformer without Positional Encoding</div>
 <div class="authors">S. Zhang, S. Liang, Y. Tan, Z. Chen, L. Li, G. Wu, Y. Chen, S. Li, Z. Zhao, C. Chen, <b>Jiajun Liang</b>, Y. Tang</div>
@@ -512,7 +378,7 @@ My research interests lie in multimodal understanding and generation, with a par
 </div>
 
 <!-- ================= Knowledge Distillation/Efficient AI ================= -->
-<div class="pub-cat">▲ Knowledge Distillation/Efficient AI</div>
+<div class="pub-cat">Knowledge Distillation &amp; Efficient AI</div>
 
 <div class="pub-title">Efficient One-Pass Self-Distillation with Zipf’s Label Smoothing</div>
 <div class="authors"><b>Jiajun Liang</b>, L. Li, Z. Bing, B. Zhao, Y. Tang, B. Lin, H. Fan</div>
@@ -549,7 +415,7 @@ My research interests lie in multimodal understanding and generation, with a par
 <div class="pub-title">DOT: A Distillation-Oriented Trainer</div>
 <div class="authors">B. Zhao, Q. Cui, R. Song, <b>Jiajun Liang</b></div>
 <div>
-  ICCV, 2023 
+  ICCV, 2023
   [<a href="https://arxiv.org/abs/2307.08436" target="_blank">Paper</a>]
   [<a href="https://github.com/megvii-research/mdistiller" target="_blank">Code</a>]
 </div>
@@ -562,12 +428,12 @@ My research interests lie in multimodal understanding and generation, with a par
 </div>
 
 <!-- ================= Vision / Recognition ================= -->
-<div class="pub-cat">▲ Vision / Recognition</div>
+<div class="pub-cat">Vision &amp; Recognition</div>
 
 <div class="pub-title">EAST: An Efficient and Accurate Scene Text Detector</div>
 <div class="authors">X. Zhou, C. Yao, H. Wen, Y. Wang, S. Zhou, W. He, <b>Jiajun Liang</b></div>
 <div>
-  CVPR, 2017 
+  CVPR, 2017
   [<a href="https://arxiv.org/abs/1704.03155" target="_blank">Paper</a>]
   [<a href="https://github.com/argman/EAST" target="_blank">Code</a>]
 </div>
@@ -589,10 +455,11 @@ My research interests lie in multimodal understanding and generation, with a par
 </div>
 
 
-  </div>
     <div class='footer'>
       © <span id="year"></span> Jiajun Liang
     </div>
+
+  </div><!-- /container -->
 
     <!-- Poster Overlay -->
     <div id="posterOverlay" class="poster-overlay">
